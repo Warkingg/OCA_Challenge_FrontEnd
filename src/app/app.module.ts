@@ -16,6 +16,7 @@ import { CategoryListComponent } from './category/category-list/category-list.co
 import { QuestionCreateComponent } from './quiz-question/question-create/question-create.component';
 import { QuestionDeleteComponent } from './quiz-question/question-delete/question-delete.component';
 import { QuestionEditComponent } from './quiz-question/question-edit/question-edit.component';
+import { QuestionListComponent } from './quiz-question/question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { QuestionEditComponent } from './quiz-question/question-edit/question-ed
     CategoryListComponent,
     QuestionCreateComponent,
     QuestionDeleteComponent,
-    QuestionEditComponent
+    QuestionEditComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,

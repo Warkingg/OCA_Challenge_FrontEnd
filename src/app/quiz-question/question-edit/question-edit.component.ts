@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {CategoryService} from '../../service/category/category.service';
 import {ActivatedRoute} from '@angular/router';
 import {QuestionService} from '../../service/quiz-question/question.service';
 
