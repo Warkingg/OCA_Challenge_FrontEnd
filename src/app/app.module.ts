@@ -9,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CategoryCreateComponent } from './category/category-create/category-create.component';
+import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     QuizListComponent,
     QuizCreateComponent,
     NavBarComponent,
-    SidebarComponent
+    SidebarComponent,
+    CategoryCreateComponent,
+    CategoryDeleteComponent
   ],
   imports: [
     BrowserModule,
