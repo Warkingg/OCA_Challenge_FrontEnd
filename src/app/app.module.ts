@@ -10,6 +10,7 @@ import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     QuizCreateComponent,
     NavBarComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
