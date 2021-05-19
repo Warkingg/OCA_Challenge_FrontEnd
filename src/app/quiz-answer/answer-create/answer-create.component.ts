@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {QuizQuestion} from '../../model/quiz-question';
-import {QuestionService} from '../../service/quiz-question/question.service';
 import {NgForm} from '@angular/forms';
 import {QuizAnswer} from '../../model/quiz-answer';
 import {AnswerService} from '../../service/quiz-answer/answer.service';

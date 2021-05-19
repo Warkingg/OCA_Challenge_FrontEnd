@@ -19,6 +19,7 @@ import { QuestionEditComponent } from './quiz-question/question-edit/question-ed
 import { QuestionListComponent } from './quiz-question/question-list/question-list.component';
 import { AnswerCreateComponent } from './quiz-answer/answer-create/answer-create.component';
 import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete.component';
+import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete
     QuestionEditComponent,
     QuestionListComponent,
     AnswerCreateComponent,
-    AnswerDeleteComponent
+    AnswerDeleteComponent,
+    AnswerEditComponent
   ],
   imports: [
     BrowserModule,
