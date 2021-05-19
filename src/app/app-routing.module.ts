@@ -6,6 +6,7 @@ import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
+import {ChangePasswordComponent} from './change-password/change-password.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path:'logout',
     component:RegistrationComponent
+  },
+  {
+    path:'change-password',
+    component:ChangePasswordComponent
   },
   {
     path: 'quizzes', component: QuizListComponent
