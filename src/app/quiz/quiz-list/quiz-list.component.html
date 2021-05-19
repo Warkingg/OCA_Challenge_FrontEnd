@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a routerLink="/quizzes" class="navbar-brand" style="color:white;">Quiz Management</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="btn btn-light" routerLink="/quizzes/create">Create New Quiz <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input #key="ngModel" ngModel
+             type="search"
+             name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search quizzes..." required>
+    </form>
+  </div>
+</nav>
+<div class="container" id="container">
+  <p class="font-weight-bolder">{{listQuizzes.length}} quizzes are available</p>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Question Quantity</th>
+      <th scope="col">Quiz Level</th>
+      <th scope="col">Time Setting</th>
+      <th scope="col">Pass score</th>
+      <th scope="col">Category</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let quiz of listQuizzes;">
+      <th scope="row">{{quiz.id}}</th>
+      <td>{{quiz.title}}</td>
+      <td>{{quiz.quantity}}</td>
+      <td>{{quiz.level}}</td>
+      <td>{{quiz.score}}</td>
+      <td><a  type="button" class="btn btn-primary">Chỉnh Sửa</a></td>
+      <td><a  type="button" class="btn btn-danger">Xóa</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
