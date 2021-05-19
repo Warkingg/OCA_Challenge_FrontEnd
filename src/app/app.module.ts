@@ -11,10 +11,12 @@ import {FormsModule} from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoryCreateComponent } from './category/category-create/category-create.component';
 import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
-import { CategoryComponent } from './category/category.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { QuestionCreateComponent } from './quiz-question/question-create/question-create.component';
+import { QuestionDeleteComponent } from './quiz-question/question-delete/question-delete.component';
+import { QuestionEditComponent } from './quiz-question/question-edit/question-edit.component';
+import { QuestionListComponent } from './quiz-question/question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { QuestionCreateComponent } from './quiz-question/question-create/questio
     SidebarComponent,
     CategoryCreateComponent,
     CategoryDeleteComponent,
-    CategoryComponent,
     CategoryEditComponent,
     CategoryListComponent,
-    QuestionCreateComponent
+    QuestionCreateComponent,
+    QuestionDeleteComponent,
+    QuestionEditComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
