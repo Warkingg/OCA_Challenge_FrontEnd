@@ -14,6 +14,7 @@ import { CategoryDeleteComponent } from './category/category-delete/category-del
 import { CategoryComponent } from './category/category.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import { QuestionCreateComponent } from './quiz-question/question-create/question-create.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CategoryListComponent } from './category/category-list/category-list.co
     CategoryDeleteComponent,
     CategoryComponent,
     CategoryEditComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    QuestionCreateComponent
   ],
   imports: [
     BrowserModule,
