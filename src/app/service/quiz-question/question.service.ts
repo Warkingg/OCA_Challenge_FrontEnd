@@ -17,19 +17,19 @@ export class QuestionService {
     return this.http.post<QuizQuestion>(`${API_URL}/question`, question);
   }
 
-  getCategoryById(id: number): Observable<QuizQuestion>{
+  getQuestionById(id: number): Observable<QuizQuestion>{
     return this.http.get<QuizQuestion>(`${API_URL}/questions/${id}`);
   }
 
-  updateCategory(question: QuizQuestion, id: number): Observable<QuizQuestion>{
+  updateQuestion(question: QuizQuestion, id: number): Observable<QuizQuestion>{
     return this.http.put<QuizQuestion>(`${API_URL}/questions/${id}`, question)
   }
 
-  getAllCategory(): Observable<QuizQuestion[]>{
+  getAllQuestion(): Observable<QuizQuestion[]>{
     return this.http.get<QuizQuestion[]>(`${API_URL}/questions`)
   }
 
-  deleteCategory(id: number): Observable<QuizQuestion>{
+  deleteQuestion(id: number): Observable<QuizQuestion>{
     return this.http.delete<QuizQuestion>(`${API_URL}/questions/${id}`)
   }
 }
