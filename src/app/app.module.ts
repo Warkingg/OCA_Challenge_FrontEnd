@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoryCreateComponent } from './category/category-create/category-create.component';
 import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
+import { CategoryComponent } from './category/category.component';
+import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CategoryDeleteComponent } from './category/category-delete/category-del
     NavBarComponent,
     SidebarComponent,
     CategoryCreateComponent,
-    CategoryDeleteComponent
+    CategoryDeleteComponent,
+    CategoryComponent,
+    CategoryEditComponent
   ],
   imports: [
     BrowserModule,
