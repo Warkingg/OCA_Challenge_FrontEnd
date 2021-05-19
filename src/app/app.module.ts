@@ -13,6 +13,7 @@ import { CategoryCreateComponent } from './category/category-create/category-cre
 import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CategoryEditComponent } from './category/category-edit/category-edit.co
     CategoryCreateComponent,
     CategoryDeleteComponent,
     CategoryComponent,
-    CategoryEditComponent
+    CategoryEditComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
