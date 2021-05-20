@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
       username: new FormControl(),
       password: new FormControl()
     });
+    checkLogin = false;
   error = '';
   loading = false;
   constructor(private userService : UserService,
@@ -29,12 +30,13 @@ export class LoginComponent implements OnInit {
   login(){
    this.userService.login(this.loginForm.value)
   .pipe(first())
-  .subscribe(() => {
+  .subscribe(data => {
       this.router.navigateByUrl('/home');
     },
     error => {
       this.error = 'Sai tên đăng nhập hoặc mật khẩu';
       this.loading = false;
     });
+   this.checkLogin != this.checkLogin;
   }
 }

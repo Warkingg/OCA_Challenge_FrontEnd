@@ -1,26 +1,40 @@
-
 <div class=" text-center" style="margin-bottom:0 ;font-size: 100px; color: red; background-color: bisque">
   <h1>QUIZZ CHALLENGE</h1>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">HOME</a>
+  <div class="col-md-2">
+    <a class="navbar-brand" href="#">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="col-md-8"></div>
+  <div class="col-md-2">
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="!currentUser">
+          <a class="nav-link" routerLink="/registration">Đăng Ký</a>
+        </li>
+        <li class="nav-item" *ngIf="!currentUser">
+          <a class="nav-link" routerLink="/login">Đăng Nhập</a>
+        </li>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/logout">Đăng Ký</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Đăng Nhập</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
+        <div class="dropdown dark" *ngIf="currentUser">
+          <button class="btn btn-secondary dropdown-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+            {{currentUser.username}}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" routerLink="/profile">User Profile</a>
+            <a class="dropdown-item" routerLink="/registration">Registration</a>
+            <a class="dropdown-item" routerLink="#" (click)="logout()">Log Out</a>
+          </div>
+        </div>
+
+
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -38,7 +52,7 @@
           <a class="nav-link active" href="#">Active</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" >Link</a>
+          <a class="nav-link">Link</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -54,13 +68,17 @@
       <h5>Title description, Dec 7, 2017</h5>
       <div class="fakeimg">Fake Image</div>
       <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco.</p>
       <br>
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
       <div class="fakeimg">Fake Image</div>
       <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco.</p>
     </div>
   </div>
 </div>

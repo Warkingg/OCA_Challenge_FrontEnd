@@ -3,7 +3,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
 import { QuizCreateComponent } from './quiz/quiz-create/quiz-create.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +25,7 @@ import { AnswerCreateComponent } from './quiz-answer/answer-create/answer-create
 import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete.component';
 import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.component';
 import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.component';
+import {JwtInterceptor} from "./interceptor";
 
 
 
@@ -44,7 +45,7 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     CategoryListComponent,
     QuestionCreateComponent,
 
-    SidebarComponent
+    SidebarComponent,
 
     QuestionDeleteComponent,
     QuestionEditComponent,
@@ -62,7 +63,9 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
