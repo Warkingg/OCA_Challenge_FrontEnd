@@ -24,6 +24,7 @@ import { AnswerCreateComponent } from './quiz-answer/answer-create/answer-create
 import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete.component';
 import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.component';
 import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.component';
+import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     AnswerCreateComponent,
     AnswerDeleteComponent,
     AnswerEditComponent,
-    AnswerListComponent
+    AnswerListComponent,
+    AdminHomepageComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import {QuestionService} from '../../service/quiz-question/question.service';
   templateUrl: './question-list.component.html',
   styleUrls: ['./question-list.component.css']
 })
+
 export class QuestionListComponent implements OnInit {
 
   questions: QuizQuestion[] = [];
@@ -23,5 +24,4 @@ export class QuestionListComponent implements OnInit {
       this.questions = questions;
     })
   }
-
 }

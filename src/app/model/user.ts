@@ -1,3 +1,5 @@
+import {Roles} from './roles';
+
 export interface User {
   id ?: number;
   username ?: string;
@@ -7,5 +9,5 @@ export interface User {
   rePassword ?: string;
   phoneNumber ?: string;
   email ?: string;
-  roles ?: any
+  roles ?: Roles;
 }
