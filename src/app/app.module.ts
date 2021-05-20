@@ -5,8 +5,7 @@ import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
 import { QuizCreateComponent } from './quiz/quiz-create/quiz-create.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
-import {FormsModule} from '@angular/forms';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -17,6 +16,10 @@ import { CategoryDeleteComponent } from './category/category-delete/category-del
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { QuestionCreateComponent } from './quiz-question/question-create/question-create.component';
+import {SidebarComponent} from './sidebar/sidebar.component';
+
+
+
 
 
 @NgModule({
@@ -25,7 +28,6 @@ import { QuestionCreateComponent } from './quiz-question/question-create/questio
     QuizListComponent,
     QuizCreateComponent,
     NavBarComponent,
-    SidebarComponent,
     HomeComponent,
     LoginComponent,
     RegistrationComponent,
@@ -34,13 +36,15 @@ import { QuestionCreateComponent } from './quiz-question/question-create/questio
     CategoryDeleteComponent,
     CategoryEditComponent,
     CategoryListComponent,
-    QuestionCreateComponent
+    QuestionCreateComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

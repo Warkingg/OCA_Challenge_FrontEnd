@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
-import {Quiz} from '../model/quiz';
 import {Observable} from 'rxjs';
 import {User} from '../model/user';
 const API_URL = `${environment.apiUrl}`;
@@ -14,7 +13,11 @@ export class UserService {
 
   constructor(private http: HttpClient) {
 }
-  signup(user: User): Observable<User> {
+  register(user: User): Observable<User> {
     return this.http.post<User>(`${API_URL}/api/signup`, user);
+  }
+
+  login(user: User):Observable<User>{
+    return this.http.post<User>(`${API_URL}/api/login`, user)
   }
 }
