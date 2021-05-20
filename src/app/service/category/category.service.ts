@@ -14,22 +14,22 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   createCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(`${API_URL}/categories`, category);
+    return this.http.post<Category>(`${API_URL}/category/create`, category);
   }
 
   getCategoryById(id: number): Observable<Category>{
-    return this.http.get<Category>(`${API_URL}/categories/${id}`);
+    return this.http.get<Category>(`${API_URL}/category/find/${id}`);
   }
 
   updateCategory(category: Category, id: number): Observable<Category>{
-    return this.http.put<Category>(`${API_URL}/categories/${id}`, category)
+    return this.http.put<Category>(`${API_URL}/category/update/${id}`, category)
   }
 
   getAllCategory(): Observable<Category[]>{
-    return this.http.get<Category[]>(`${API_URL}/categories`)
+    return this.http.get<Category[]>(`${API_URL}/category/list`)
   }
 
   deleteCategory(id: number): Observable<Category>{
-    return this.http.delete<Category>(`${API_URL}/categories/${id}`)
+    return this.http.delete<Category>(`${API_URL}/category/delete/${id}`)
   }
 }

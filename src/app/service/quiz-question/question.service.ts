@@ -14,22 +14,22 @@ export class QuestionService {
   constructor(private http: HttpClient) { }
 
   createQuestion(question: QuizQuestion): Observable<QuizQuestion> {
-    return this.http.post<QuizQuestion>(`${API_URL}/question`, question);
+    return this.http.post<QuizQuestion>(`${API_URL}/question/create`, question);
   }
 
-  getCategoryById(id: number): Observable<QuizQuestion>{
-    return this.http.get<QuizQuestion>(`${API_URL}/questions/${id}`);
+  getQuestionById(id: number): Observable<QuizQuestion>{
+    return this.http.get<QuizQuestion>(`${API_URL}/questions/find/${id}`);
   }
 
-  updateCategory(question: QuizQuestion, id: number): Observable<QuizQuestion>{
-    return this.http.put<QuizQuestion>(`${API_URL}/questions/${id}`, question)
+  updateQuestion(question: QuizQuestion, id: number): Observable<QuizQuestion>{
+    return this.http.put<QuizQuestion>(`${API_URL}/question/update/${id}`, question)
   }
 
-  getAllCategory(): Observable<QuizQuestion[]>{
-    return this.http.get<QuizQuestion[]>(`${API_URL}/questions`)
+  getAllQuestion(): Observable<QuizQuestion[]>{
+    return this.http.get<QuizQuestion[]>(`${API_URL}/question/list`)
   }
 
-  deleteCategory(id: number): Observable<QuizQuestion>{
-    return this.http.delete<QuizQuestion>(`${API_URL}/questions/${id}`)
+  deleteQuestion(id: number): Observable<QuizQuestion>{
+    return this.http.delete<QuizQuestion>(`${API_URL}/question/delete/${id}`)
   }
 }
