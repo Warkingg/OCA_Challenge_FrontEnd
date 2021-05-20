@@ -1,1 +1,24 @@
-<p>category-edit works!</p>
+<h2 style="text-align: center">Update Category</h2>
+<div class="col-md-6 offset-3">
+  <form [formGroup]="categoryForm" (ngSubmit)="updateCategory(id)" >
+    <div hidden>
+      <label>ID</label>
+      <input formControlName="id" name="id" type="number" disabled>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input class="form-control" formControlName="name" name="name" type="text">
+    </div>
+
+    <div class="mb-3" hidden>
+      <label class="form-label">Quiz Questions</label>
+      <input class="form-control" formControlName="quizQuestions" name="quizQuestions" type="text">
+    </div>
+
+    <div class="mb-3">
+      <button class="btn badge-success" type="submit" value="Update">Update</button>
+      <button class="btn badge-danger" routerLink="/category">Exit</button>
+    </div>
+  </form>
+</div>

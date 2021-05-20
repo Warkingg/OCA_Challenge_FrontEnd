@@ -1,1 +1,25 @@
-<p>category-list works!</p>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+<!--    <button routerLink="/category/create" class="btn badge-success">Add New Category</button>-->
+    <table class="table caption-top">
+      <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th colspan="2" scope="col" rowspan="2"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let category of categories">
+        <tr>
+          <td>{{category.id}}</td>
+          <td>{{category.name}}</td>
+          <td><button class="btn btn-danger" [routerLink]="['/category/delete', category.id]">Delete</button></td>
+          <td><button class="btn btn-danger" [routerLink]="['/category/edit', category.id]">Edit</button></td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

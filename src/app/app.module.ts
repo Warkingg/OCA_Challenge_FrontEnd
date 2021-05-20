@@ -25,6 +25,7 @@ import { AnswerCreateComponent } from './quiz-answer/answer-create/answer-create
 import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete.component';
 import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.component';
 import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -43,16 +44,15 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     CategoryEditComponent,
     CategoryListComponent,
     QuestionCreateComponent,
-
-    SidebarComponent
-
+    SidebarComponent,
     QuestionDeleteComponent,
     QuestionEditComponent,
     QuestionListComponent,
     AnswerCreateComponent,
     AnswerDeleteComponent,
     AnswerEditComponent,
-    AnswerListComponent
+    AnswerListComponent,
+    DashboardComponent
 
   ],
   imports: [
