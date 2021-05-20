@@ -1,1 +1,17 @@
-<p>category-create works!</p>
+
+<div class="col-md-6 offset-3">
+  <form #categoryForm="ngForm" (ngSubmit)="addCategory(categoryForm)">
+    <h1>Create Category</h1>
+    <div class="mb-3">
+      <label for="name" class="form-label">Category</label>
+      <input type="text" [(ngModel)]="category.name" name="name" class="form-control" id="name">
+    </div>
+    <!--  <div class="mb-3">-->
+    <!--    <label for="quizQuestions" class="form-label">Quiz Questions</label>-->
+    <!--    <input type="text" [(ngModel)]="category.quizQuestions" name="name" class="form-control" id="quizQuestions">-->
+    <!--  </div>-->
+    <button class="btn badge-success" type="submit" value="Add">Add Category</button>
+    <button class="btn badge-danger" routerLink="/admin">Exit</button>
+
+  </form>
+</div>
