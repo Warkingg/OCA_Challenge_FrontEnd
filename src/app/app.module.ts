@@ -5,8 +5,7 @@ import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
 import { QuizCreateComponent } from './quiz/quiz-create/quiz-create.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
-import {FormsModule} from '@angular/forms';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -17,6 +16,8 @@ import { CategoryDeleteComponent } from './category/category-delete/category-del
 import { CategoryEditComponent } from './category/category-edit/category-edit.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { QuestionCreateComponent } from './quiz-question/question-create/question-create.component';
+
+import {SidebarComponent} from './sidebar/sidebar.component';
 import { QuestionDeleteComponent } from './quiz-question/question-delete/question-delete.component';
 import { QuestionEditComponent } from './quiz-question/question-edit/question-edit.component';
 import { QuestionListComponent } from './quiz-question/question-list/question-list.component';
@@ -26,13 +27,13 @@ import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.compo
 import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     QuizListComponent,
     QuizCreateComponent,
     NavBarComponent,
-    SidebarComponent,
     HomeComponent,
     LoginComponent,
     RegistrationComponent,
@@ -42,6 +43,9 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     CategoryEditComponent,
     CategoryListComponent,
     QuestionCreateComponent,
+
+    SidebarComponent
+
     QuestionDeleteComponent,
     QuestionEditComponent,
     QuestionListComponent,
@@ -49,12 +53,14 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     AnswerDeleteComponent,
     AnswerEditComponent,
     AnswerListComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
