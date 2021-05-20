@@ -1,4 +1,11 @@
+#dropdownMenuButton {
+  background-color: #343a40!important;
+  width: 250px;
+}
 
+.dropdown-menu{
+  width: 250px;
+}
 
 .nav-pills > li > a {
   border-radius: 0;
