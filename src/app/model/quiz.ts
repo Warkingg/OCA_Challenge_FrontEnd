@@ -8,6 +8,6 @@ export interface Quiz {
   startTime? : number;
   endTime?: number;
   level?: string;
-  quantity?; number;
+  quantity?: number;
   user?: User;
 }

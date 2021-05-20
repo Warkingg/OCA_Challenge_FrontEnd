@@ -43,9 +43,7 @@ import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.compo
     CategoryEditComponent,
     CategoryListComponent,
     QuestionCreateComponent,
-
-    SidebarComponent
-
+    SidebarComponent,
     QuestionDeleteComponent,
     QuestionEditComponent,
     QuestionListComponent,
