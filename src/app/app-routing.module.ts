@@ -7,6 +7,7 @@ import {RegistrationComponent} from './registration/registration.component';
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {ChangePasswordComponent} from './change-password/change-password.component';
+import {ProfileComponent} from "./user/profile/profile.component";
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   },
   {
     path:'quizzes/create', component: QuizCreateComponent
+  },
+  {
+    path:'profile/:id',
+    component: ProfileComponent
   }
 ];
 
