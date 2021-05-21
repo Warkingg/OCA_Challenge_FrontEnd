@@ -26,6 +26,7 @@ import { AnswerDeleteComponent } from './quiz-answer/answer-delete/answer-delete
 import { AnswerEditComponent } from './quiz-answer/answer-edit/answer-edit.component';
 import { AnswerListComponent } from './quiz-answer/answer-list/answer-list.component';
 import {JwtInterceptor} from "./interceptor";
+import { ProfileComponent } from './user/profile/profile.component';
 
 
 
@@ -53,7 +54,8 @@ import {JwtInterceptor} from "./interceptor";
     AnswerCreateComponent,
     AnswerDeleteComponent,
     AnswerEditComponent,
-    AnswerListComponent
+    AnswerListComponent,
+    ProfileComponent
 
   ],
   imports: [
